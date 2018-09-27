@@ -1,8 +1,3 @@
-// B.frequency.value = 200
-// B.start()
-// osc.start(0);
-// osc.frequency.value = 440
-// osc.type = ["triangle", "square", "sawtooth", "sine"]
 document.addEventListener("DOMContentLoaded", () => {
   playNote()
   stopNote()
@@ -25,9 +20,7 @@ const pickNewSound = () => {
 const createSound = () => {
   var audioCtx = new (AudioContext || webkitAudioContext)()
   var osc = audioCtx.createOscillator()
-  undefined
   osc.frequency.value = 440
-  440
   osc.connect(audioCtx.destination)
   return osc
 }
