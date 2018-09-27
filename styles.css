@@ -31,6 +31,10 @@ body {
   cursor: pointer;
 }
 
+#b {
+  transform: translate(192%, 400%);
+}
+
 
 .inner-container {
   display: flex;
