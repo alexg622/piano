@@ -66,8 +66,55 @@ const L = createSound()
 L.frequency.value = 0
 L.start()
 
+const W = createSound()
+W.frequency.value = 0
+W.start()
+
+const E = createSound()
+E.frequency.value = 0
+E.start()
+
+const T = createSound()
+T.frequency.value = 0
+T.start()
+
+const Y = createSound()
+Y.frequency.value = 0
+Y.start()
+
+const U = createSound()
+U.frequency.value = 0
+U.start()
+
 const playNote = () => {
   window.addEventListener("keydown", e => {
+    console.log(e.keyCode);
+
+    if(e.keyCode === 87) {
+      W.frequency.value = notes.lowCSharp
+      document.querySelector(".c-sharp").id = "playing"
+    }
+
+    if(e.keyCode === 69) {
+      E.frequency.value = notes.lowDSharp
+      document.querySelector(".d-sharp").id = "playing"
+    }
+
+    if(e.keyCode === 84) {
+      T.frequency.value = notes.lowFSharp
+      document.querySelector(".f-sharp").id = "playing"
+    }
+
+    if(e.keyCode === 89) {
+      Y.frequency.value = notes.lowGSharp
+      document.querySelector(".g-sharp").id = "playing"
+    }
+
+    if(e.keyCode === 85) {
+      U.frequency.value = notes.lowASharp
+      document.querySelector(".a-shart").id = "playing"
+    }
+
     if(e.keyCode === 65) {
       A.frequency.value = notes.lowC
       document.querySelector(".c").id = "playing"
@@ -113,6 +160,32 @@ const playNote = () => {
 
 const stopNote = () => {
   window.addEventListener("keyup", e => {
+
+    if(e.keyCode === 87) {
+      W.frequency.value = 0
+      document.querySelector(".c-sharp").id = ""
+    }
+
+    if(e.keyCode === 69) {
+      E.frequency.value = 0
+      document.querySelector(".d-sharp").id = ""
+    }
+
+    if(e.keyCode === 84) {
+      T.frequency.value = 0
+      document.querySelector(".f-sharp").id = ""
+    }
+
+    if(e.keyCode === 89) {
+      Y.frequency.value = 0
+      document.querySelector(".g-sharp").id = ""
+    }
+
+    if(e.keyCode === 85) {
+      U.frequency.value = 0
+      document.querySelector(".a-sharp").id = ""
+    }
+
     if(e.keyCode === 65) {
       A.frequency.value = 0
       document.querySelector(".c").id = ""
