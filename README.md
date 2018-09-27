@@ -4,12 +4,12 @@ To do this I made an audio context object that then created an oscillator. on th
 
 
 
-[](https://github.com/alexg622/piano/blob/master/images/new_piano.png?raw=true)
+()[https://github.com/alexg622/piano/blob/master/images/new_piano.png?raw=true]
 
 
 
-[](https://github.com/alexg622/piano/blob/master/images/codeOne.png?raw=true)
+()[https://github.com/alexg622/piano/blob/master/images/codeOne.png?raw=true]
 
 
 
-[](https://github.com/alexg622/piano/blob/master/images/codeTwo.png?raw=true)
+()[https://github.com/alexg622/piano/blob/master/images/codeTwo.png?raw=true]
