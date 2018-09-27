@@ -1,0 +1,78 @@
+body {
+  background: black;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.piano-container {
+  display: flex;
+}
+
+.piano-container div {
+  width: 75px;
+  height: 200px;
+  background: white;
+  border: 1px solid black;
+}
+
+.c-sharp {
+  position: absolute;
+  background: black;
+  width: 50px;
+  transform: translate(100%);
+  height: 136px;
+}
+
+.d-sharp {
+  position: absolute;
+  background: black;
+  width: 50px;
+  height: 136px;
+  transform: translate(100%);
+}
+
+.f-sharp {
+  position: absolute;
+  background: black;
+  width: 50px;
+  transform: translate(100%);
+  height: 136px;
+}
+
+.g-sharp {
+  position: absolute;
+  background: black;
+  width: 50px;
+  height: 136px;
+  transform: translate(100%);
+}
+
+section {
+  position: absolute;
+  transform: translate(130%, 400%);
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+.a-sharp {
+  position: absolute;
+  background: black;
+  width: 50px;
+  height: 136px;
+  transform: translate(100%);
+}
+
+#playing {
+  background: #e5e5e5;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+}
