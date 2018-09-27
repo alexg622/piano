@@ -2,10 +2,28 @@
 // B.start()
 // osc.start(0);
 // osc.frequency.value = 440
-// osc.type = ["triangle", "square", "sine"]
+// osc.type = ["triangle", "square", "sawtooth", "sine"]
+document.addEventListener("DOMContentLoaded", () => {
+  playNote()
+  stopNote()
+  changeType("triangle")
+  document.querySelectorAll(".sound")[0].classList.add("sound-playing")
+  pickNewSound()
+})
+
+const pickNewSound = () => {
+  document.querySelectorAll(".sound-inner").forEach(theSound => {
+    theSound.addEventListener("click", (e) => {
+      document.querySelectorAll(".sound-inner").forEach(innerSound => innerSound.parentElement.classList.remove("sound-playing"))
+      e.target.parentElement.classList.add("sound-playing")
+      window.e = e
+      changeType(e.target.innerText)
+    })
+  })
+}
 
 const createSound = () => {
-  var audioCtx = new (AudioContext || webkitAudioContext)();
+  var audioCtx = new (AudioContext || webkitAudioContext)()
   var osc = audioCtx.createOscillator()
   undefined
   osc.frequency.value = 440
@@ -30,65 +48,86 @@ const notes = {
   c: 261.63
 }
 
+const notesArr = []
+
 const A = createSound()
 A.frequency.value = 0
 A.start()
+notesArr.push(A)
 
 const S = createSound()
 S.frequency.value = 0
 S.start()
+notesArr.push(S)
 
 const D = createSound()
 D.frequency.value = 0
 D.start()
+notesArr.push(D)
 
 const F = createSound()
 F.frequency.value = 0
 F.start()
+notesArr.push(F)
 
 const G = createSound()
 G.frequency.value = 0
 G.start()
+notesArr.push(G)
 
 const H = createSound()
 H.frequency.value = 0
 H.start()
+notesArr.push(H)
 
 const J = createSound()
 J.frequency.value = 0
 J.start()
+notesArr.push(J)
 
 const K = createSound()
 K.frequency.value = 0
 K.start()
+notesArr.push(K)
 
 const L = createSound()
 L.frequency.value = 0
 L.start()
+notesArr.push(L)
 
 const W = createSound()
 W.frequency.value = 0
 W.start()
+notesArr.push(W)
 
 const E = createSound()
 E.frequency.value = 0
 E.start()
+notesArr.push(E)
 
 const T = createSound()
 T.frequency.value = 0
 T.start()
+notesArr.push(T)
 
 const Y = createSound()
 Y.frequency.value = 0
 Y.start()
+notesArr.push(Y)
 
 const U = createSound()
 U.frequency.value = 0
 U.start()
+notesArr.push(U)
+
+const changeType = (type) => {
+  notesArr.forEach(note => {
+    note.type = type
+  })
+}
 
 const playNote = () => {
   window.addEventListener("keydown", e => {
-    console.log(e.keyCode);
 
     if(e.keyCode === 87) {
       W.frequency.value = notes.lowCSharp
@@ -112,7 +151,7 @@ const playNote = () => {
 
     if(e.keyCode === 85) {
       U.frequency.value = notes.lowASharp
-      document.querySelector(".a-shart").id = "playing"
+      document.querySelector(".a-sharp").id = "playing"
     }
 
     if(e.keyCode === 65) {
@@ -227,6 +266,3 @@ const stopNote = () => {
     }
   })
 }
-
-playNote()
-stopNote()
