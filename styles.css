@@ -35,6 +35,14 @@ body {
   transform: translate(192%, 400%);
 }
 
+#S{
+  transform: translate(165%, 400%);
+}
+
+#F{
+  transform: translate(165%, 400%);
+}
+
 
 .inner-container {
   display: flex;
